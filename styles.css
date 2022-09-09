@@ -1,0 +1,10 @@
+.calc-botones {
+    display:grid;
+    grid-template-columns: repeat(6, 5rem);
+    grid-template-rows: repeat(6, 5rem);
+}
+.igual {
+    grid-column-end: 7;
+    grid-row-end: 7;
+    grid-row-start: 5;
+}
