@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <section>
-            <div class="calc-input"></div>
-            <div class="resultado"></div>
+        <section id="calc-display">
+            <div class="calculo">2 + 2</div>
+            <div class="resultado">4</div>
         </section>
-        <section class="calc-botones">
+        <section id="calc-botones">
           <button type="button" class="funcion" value="(">(</button>
           <button type="button" class="funcion" value=")">)</button>
           <button type="button" class="funcion" value="x!">x!</button>
@@ -42,13 +45,13 @@
           <button type="button" class="numero" value="8">8</button>
           <button type="button" class="numero" value="9">9</button>
           <button type="button" class="funcion" value="-">-</button>
-          <button type="button" class="funcion" value="AC">AC</button>
+          <button type="button" class="funcion-AC" value="AC">AC</button>
           <button type="button" class="igual" value="=">=</button>
           <button type="button" class="funcion" value=".">.</button>
           <button type="button" class="numero" value="0">0</button>
           <button type="button" class="funcion" value="π">π</button>
           <button type="button" class="funcion" value="+">+</button>
-          <button type="button" class="funcion" value="MR">MR</button>
+          <button type="button" class="funcion-DEL" value="DEL">DEL</button>
         </section>
     </div>    
 </body>
