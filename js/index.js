@@ -1,12 +1,32 @@
-let calculo = document.querySelector('.calculo');
-let resultado = document.querySelector('.resultado');
-let botones = document.querySelectorAll('button');
-let borrar = document.querySelector('.funcion-DEL');
-let limpiar = document.querySelector('.funcion-AC');
-let igual = document.querySelector('.igual');
+const calculo = document.querySelector('.calculo');
+const resultado = document.querySelector('.resultado');
+const botones = document.querySelectorAll('button');
+const borrar = document.querySelector('.funcion-DEL');
+const limpiar = document.querySelector('.funcion-AC');
+const igual = document.querySelector('.igual');
+let valorEnTiempoReal = [];
 
-botones.forEach(boton => {
+limpiar.addEventListener("click", () => {
+    valorEnTiempoReal = [''];
+    resultado.innerHTML = 0;
+    calculo.className = 'calculo';
+    resultado.className = 'resultado';
+})
+
+botones.forEach((boton) => {
     boton.addEventListener("click", () => {
-        calculo.innerHTML += boton.value
+        if (!boton.id.match('borrar')) {
+            valorEnTiempoReal.push(boton.value)
+            calculo.innerHTML = valorEnTiempoReal.join('');           
+        }
+        if (boton.id.match('borrar')) {
+            valorEnTiempoReal.pop();
+            calculo.innerHTML = valorEnTiempoReal.join('');
+        }
+        if (boton.id.match('igual')) {
+            calculo.className = 'resultado';
+            resultado.className = 'calculo';
+            resultado.innerHTML = eval(valorEnTiempoReal.join(''));
+        }    
     })
 })

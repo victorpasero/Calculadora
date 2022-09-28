@@ -14,7 +14,7 @@
     <div class="container">
         <section id="calc-display">
             <div class="calculo"></div>
-            <div class="resultado"></div>
+            <div class="resultado">0</div>
         </section>
         <section id="calc-botones">
           <button type="button" class="funcion" value="(">(</button>
@@ -45,13 +45,13 @@
           <button type="button" class="numero" value="8">8</button>
           <button type="button" class="numero" value="9">9</button>
           <button type="button" class="funcion" value="-">-</button>
-          <button type="button" class="funcion-AC" value="AC">AC</button>
-          <button type="button" class="igual" value="=">=</button>
+          <button type="button" class="funcion-AC" id="limpiar" value="">AC</button>
+          <button type="button" class="igual" id="igual" value="">=</button>
           <button type="button" class="funcion" value=".">.</button>
           <button type="button" class="numero" value="0">0</button>
           <button type="button" class="funcion" value="π">π</button>
           <button type="button" class="funcion" value="+">+</button>
-          <button type="button" class="funcion-DEL" value="DEL">DEL</button>
+          <button type="button" class="funcion-DEL" id="borrar" value="">DEL</button>
         </section>
     </div> 
     <script src="./js/index.js"></script>

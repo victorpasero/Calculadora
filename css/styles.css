@@ -9,46 +9,48 @@ body {
 .container {
     background-color: rgb(170, 154, 154);
     display: flex;
-    max-height: auto;
-    max-width: auto;
+    height: auto;
+    max-width: 65vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    border-radius: 15px;   
+    border-radius: 15px;  
 }
 #calc-display {
     width: 100%;
     display: grid;
-    margin-top: 3vh;
+    margin: 3vh;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(2, minmax(4rem, auto));
     word-wrap: break-word;
     background-color: rgb(56, 51, 51);  
 }
 .calculo {
     text-align: right;
-    height: 3vh;
+    height: 6vh;
     color: rgb(228, 213, 213);
-    font-size: x-large;
-    line-height: 2;
+    font-size: xx-large;
+    line-height: 1;
     word-wrap: break-word;
-    padding: 2rem 2rem 0 0;
+    max-height: 100%;
+    overflow: hidden;
+    padding-right: 1rem;
+   
 }
 .resultado {
     text-align: right;
     color: antiquewhite;
-    height: 3vh;
-    line-height: 3;
-    font-size: xx-large;
-    padding: 0 2vh 2vh 0;
+    height: 4vh;
+    line-height: 2;
+    font-size: x-large;
+    padding-right: 1rem;
 }
 #calc-botones {
-    display:grid;
-    grid-template-columns: repeat(6, 5rem);
-    grid-template-rows: repeat(6, 5rem);
-    row-gap: 10px;
-    column-gap: 10px;
-    padding-top: 2rem;
+    display: grid;
+    grid: repeat(6, 4rem) / repeat(6, 4rem);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
 }
 .igual {
     grid-column-end: 7;
